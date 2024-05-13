@@ -1,6 +1,28 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+/* General Attributes */
+body {
+    padding: 1rem;
+    background-color: #222;
+    color: white;
 }
+
+/* Main Attributes */
+/* Slide Attributes */
+
+.slide {
+    display: none;
+}
+
+.slide>img {
+    margin: auto;
+    width: 60%;
+    height: 60vh;
+    object-fit: fill;
+    display: block;
+}
+
+.active {
+    display: block;
+}
+
+
 

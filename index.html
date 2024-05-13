@@ -3,13 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://unpkg.com/vue@3.4.27/dist/vue.global.js"></script>
-    <title>My first slider with VueJs</title>
+    <title>My First Slider with VueJs</title>
 </head>
 <body>
+    
+    <h1 class="text-center mt-3">My first Carousel with VueJs</h1>
+    <div id="app">
 
+        <div v-for="image, i in images" class="slide" :class="checkImageVisibility(i)">
+            <img :src="image" alt="">
+        </div>
 
+        <div class="py-3 text-center">
+            <button @click="back()">Indietro</button>
+            <button @click="next()">Avanti</button>
+            <br><input type="number" v-model="activeImage">
+        </div>
+
+    </div>
 
     <script src="./js/main.js"></script>
 </body>
