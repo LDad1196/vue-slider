@@ -10,11 +10,15 @@
 </head>
 <body>
     
-    <h1 class="text-center mt-3">My first Carousel with VueJs</h1>
+    <h1 class="text-center my-3">My first Carousel with VueJs</h1>
     <div id="app">
 
         <div v-for="image, i in images" class="slide" :class="checkImageVisibility(i)">
             <img :src="image" alt="">
+        </div>
+
+        <div id="thumb-container">
+            <img v-for="thumbnail, i in images" :class="checkImageVisibility(i)" :src="thumbnail" @click="mostraSlide(i)">
         </div>
 
         <div class="py-3 text-center">

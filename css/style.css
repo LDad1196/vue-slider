@@ -24,5 +24,16 @@ body {
     display: block;
 }
 
+#thumb-container {
+    display: flex;
+    margin: auto;
+    width: 60%;
+    height: 20vh;
+}
+
+#thumb-container>img {
+    width: 20%;
+}
+
 
 
