@@ -24,10 +24,17 @@ createApp({
         
         next() {
             this.activeImage++;
+            if(this.activeImage > 4) {
+                this.activeImage = 0
+            }
         },
 
         back() {
             this.activeImage--;
+            if(this.activeImage < 0) {
+                this.activeImage = 4
+            }
+
         },
 
         mostraSlide(indice) {
